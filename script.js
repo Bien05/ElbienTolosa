@@ -190,3 +190,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.querySelector('.modal');
+    const modalContent = modal.querySelector('.modal-content');
+    
+    document.querySelectorAll('.view-project').forEach(button => {
+        button.addEventListener('click', function(e) {
+            const portfolioItem = this.closest('.portfolio-item');
+            if(portfolioItem.dataset.video === 'true') {
+                const video = portfolioItem.querySelector('video').cloneNode(true);
+                video.muted = false;
+                video.controls = true;
+                modalContent.innerHTML = '';
+                modalContent.appendChild(video);
+                video.play();
+            }
+        });
+    });
+});

@@ -893,6 +893,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Work Section */
+.work h1 {
+    font-size: var(--h2-size);
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #4361ee;
+}
+
 .work h2 {
     font-size: var(--h2-size);
     text-align: center;
@@ -1330,4 +1337,16 @@ body.modal-open {
         font-size: 1.2rem;
     }
 }
+.modal-content video {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+}
 
+.portfolio-item[data-video="true"] .modal-content {
+    width: 90vw;
+    max-width: 1200px;
+    padding: 0;
+    background: black;
+}
